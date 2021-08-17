@@ -91,7 +91,7 @@ begin
   begin
     fileDownload := TFileStream.Create(dlgSave.FileName + ExtractFileExt(edtUrl.Text), fmCreate);
     try
-      if not DirectoryExists('D:\OpenSSL') then
+      if not DirectoryExists('C:\OpenSSL') then
         frmDiretorio.ShowModal;
       if frmDiretorio.pastaSel <> '' then
         IdOpenSSLSetLibPath(frmDiretorio.pastaSel)

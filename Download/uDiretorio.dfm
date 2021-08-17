@@ -21,10 +21,10 @@ object frmDiretorio: TfrmDiretorio
   TextHeight = 13
   object doDirectorySel: TDirectoryOutline
     Left = 0
-    Top = 0
+    Top = 42
     Width = 393
-    Height = 193
-    Align = alTop
+    Height = 155
+    Align = alClient
     ItemHeight = 13
     Options = [ooDrawFocusRect]
     PictureLeaf.Data = {
@@ -56,25 +56,79 @@ object frmDiretorio: TfrmDiretorio
       8000800080008000800080008000800080008000800080008000800080008000
       80008000800080008000}
     TabOrder = 0
-    ExplicitWidth = 381
+    ExplicitLeft = 8
+    ExplicitTop = 14
+    ExplicitHeight = 177
     Data = {10}
   end
-  object Button1: TButton
-    Left = 180
-    Top = 192
-    Width = 105
-    Height = 41
-    Caption = 'Selecionar'
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 393
+    Height = 42
+    Align = alTop
     TabOrder = 1
-    OnClick = Button1Click
+    DesignSize = (
+      393
+      42)
+    object Label1: TLabel
+      Left = 8
+      Top = 2
+      Width = 87
+      Height = 13
+      Caption = 'Selecinar Diret'#243'rio'
+    end
+    object Button3: TButton
+      Left = 310
+      Top = 11
+      Width = 75
+      Height = 25
+      Anchors = [akTop, akRight]
+      Caption = 'Procurar'
+      TabOrder = 0
+      OnClick = Button3Click
+    end
+    object edtDiretorio: TEdit
+      Left = 8
+      Top = 15
+      Width = 295
+      Height = 21
+      Anchors = [akLeft, akTop, akRight]
+      TabOrder = 1
+    end
   end
-  object Button2: TButton
-    Left = 288
-    Top = 192
-    Width = 105
-    Height = 41
-    Caption = 'Cancelar'
+  object Panel2: TPanel
+    Left = 0
+    Top = 197
+    Width = 393
+    Height = 34
+    Align = alBottom
     TabOrder = 2
-    OnClick = Button2Click
+    object Button1: TButton
+      Left = 182
+      Top = 1
+      Width = 105
+      Height = 32
+      Align = alRight
+      Caption = 'Selecionar'
+      TabOrder = 0
+      OnClick = Button1Click
+      ExplicitLeft = 177
+      ExplicitTop = 6
+      ExplicitHeight = 41
+    end
+    object Button2: TButton
+      Left = 287
+      Top = 1
+      Width = 105
+      Height = 32
+      Align = alRight
+      Caption = 'Cancelar'
+      TabOrder = 1
+      OnClick = Button2Click
+      ExplicitLeft = 288
+      ExplicitTop = 0
+      ExplicitHeight = 41
+    end
   end
 end

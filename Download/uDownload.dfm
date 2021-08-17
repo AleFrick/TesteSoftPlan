@@ -23,7 +23,6 @@ object frmDownload: TfrmDownload
     Height = 58
     Align = alTop
     TabOrder = 0
-    ExplicitTop = 1
     DesignSize = (
       635
       58)
