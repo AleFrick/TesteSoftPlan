@@ -36,6 +36,7 @@ type
     cnnConexao: TFDConnection;
     driver: TFDPhysSQLiteDriverLink;
     FDQuery1: TFDQuery;
+    FileOpenDialog1: TFileOpenDialog;
     procedure Button2Click(Sender: TObject);
     function RetornaPorcentagem(ValorMaximo, ValorAtual: real): string;
     function RetornaKiloBytes(ValorAtual: real): string;
@@ -48,6 +49,7 @@ type
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnMensagemClick(Sender: TObject);
     procedure Button1Click(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -147,6 +149,22 @@ begin
       Abort
     else
       IdHTTP1.Disconnect;
+end;
+
+procedure TfrmDownload.FormShow(Sender: TObject);
+begin
+  if not FileExists('C:\TesteAlex\softplan.db') then
+  begin
+    MessageDlg('Banco não encontrado, selecione o arquivo.', mtInformation, [mbOK], 0);
+    if FileOpenDialog1.Execute then
+      cnnConexao.Params.Database := FileOpenDialog1.FileName
+    else
+    begin
+      MessageDlg('Necessário selecionar o banco, aplicação será fechada.', mtWarning, [mbOK], 0);
+      Application.Terminate;
+    end;
+  end else
+    cnnConexao.Params.Database := 'C:\TesteAlex\softplan.db';
 end;
 
 procedure TfrmDownload.IdHTTP1Work(ASender: TObject; AWorkMode: TWorkMode;

@@ -14,6 +14,7 @@ object frmDownload: TfrmDownload
   Font.Style = []
   OldCreateOrder = False
   OnClose = FormClose
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
@@ -173,7 +174,7 @@ object frmDownload: TfrmDownload
   end
   object cnnConexao: TFDConnection
     Params.Strings = (
-      'Database=D:\Dropbox\Teste softPlan\softplan.db'
+      'Database='
       'ConnectionDef=SQLite_Demo')
     Left = 352
   end
@@ -185,5 +186,12 @@ object frmDownload: TfrmDownload
     Connection = cnnConexao
     Left = 424
     Top = 65528
+  end
+  object FileOpenDialog1: TFileOpenDialog
+    FavoriteLinks = <>
+    FileTypes = <>
+    Options = []
+    Left = 360
+    Top = 40
   end
 end
