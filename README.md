@@ -2,7 +2,7 @@
 Resultado do desafio proposto pela Softplan, no qual consiste em um software para efetuar download e guardar os históricos dos links utilizados.
 
 ### 📋 Pré-requisitos
-1) Pasta OpenSSL('./OpenSSL'), a aplicação por default tenta procurar a pasta dentro de 'C:\TesteAlex\', caso esteja em outro diretório o mesmo pode ser selecionado ao tentar efetuar um download, que irá validar e abrir uma janela para que possa informar o caminho da mesma;
+1) Pasta OpenSSL './OpenSSL', a aplicação por default tenta procurar a pasta dentro de 'C:\TesteAlex\', caso esteja em outro diretório o mesmo pode ser selecionado ao tentar efetuar um download, que irá validar e abrir uma janela para que possa informar o caminho da mesma;
 2) Arquivo softplan.db, este arquivo se encontra dentro de './Database/', o mesmo ocorre para a pasta OpenSSL, ao abrir a aplicação ira solicitar que informe o caminho do banco caso a aplicação não tenha encontrado.
 
 ## ⚙️ Funcionalidades
